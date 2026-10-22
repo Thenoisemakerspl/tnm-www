@@ -1,0 +1,642 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "thenoisemakers.pl"
+        }
+      ],
+      "destination": "https://www.thenoisemakers.pl/",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "en.thenoisemakers.pl"
+        }
+      ],
+      "destination": "https://www.thenoisemakers.pl/en/index.html",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "thenoisemakers.pl"
+        }
+      ],
+      "destination": "https://www.thenoisemakers.pl/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "the-noise-makers-2026.vercel.app"
+        }
+      ],
+      "destination": "https://www.thenoisemakers.pl/",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "the-noise-makers-2026.vercel.app"
+        }
+      ],
+      "destination": "https://www.thenoisemakers.pl/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "en.thenoisemakers.pl"
+        }
+      ],
+      "destination": "https://www.thenoisemakers.pl/en/index.html",
+      "permanent": true
+    },
+    {
+      "source": "/start",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/musical",
+      "destination": "/zajecia-zespolowe-dzieci.html",
+      "permanent": true
+    },
+    {
+      "source": "/store",
+      "destination": "/zajecia-zespolowe.html",
+      "permanent": true
+    },
+    {
+      "source": "/store/musical-grupa-3-4-lata",
+      "destination": "/zajecia-zespolowe-dzieci.html",
+      "permanent": true
+    },
+    {
+      "source": "/store/musical-grupa-5-6-lat",
+      "destination": "/zajecia-zespolowe-dzieci.html",
+      "permanent": true
+    },
+    {
+      "source": "/store/musical-grupa-7-18-lat",
+      "destination": "/zajecia-zespolowe-dzieci.html",
+      "permanent": true
+    },
+    {
+      "source": "/store/musical-dorosli",
+      "destination": "/zajecia-zespolowe-dorosli.html",
+      "permanent": true
+    },
+    {
+      "source": "/store/musical-dorosli-raty",
+      "destination": "/zajecia-zespolowe-dorosli.html",
+      "permanent": true
+    },
+    {
+      "source": "/store/konsultacja-1-na-1",
+      "destination": "/konsultacje.html",
+      "permanent": true
+    },
+    {
+      "source": "/diagnostyka-terminy",
+      "destination": "/konsultacje.html",
+      "permanent": true
+    },
+    {
+      "source": "/zajecia",
+      "destination": "/zajecia-indywidualne.html",
+      "permanent": true
+    },
+    {
+      "source": "/zajecia-indywidualne",
+      "destination": "/zajecia-indywidualne.html",
+      "permanent": true
+    },
+    {
+      "source": "/zajecia-grupowe",
+      "destination": "/zajecia-zespolowe.html",
+      "permanent": true
+    },
+    {
+      "source": "/pobierz-oferte-dzieci",
+      "destination": "/zajecia-indywidualne-dzieci.html",
+      "permanent": true
+    },
+    {
+      "source": "/pobierz-oferte-dorosli",
+      "destination": "/zajecia-indywidualne-dorosli.html",
+      "permanent": true
+    },
+    {
+      "source": "/rozwijamy",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/proces",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/potencjal",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/decyzja",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/konfigurator/feedback",
+      "destination": "/konfigurator.html?k=feedback",
+      "permanent": true
+    },
+    {
+      "source": "/konfigurator/polkolonie",
+      "destination": "/konfigurator.html?k=polkolonie",
+      "permanent": true
+    },
+    {
+      "source": "/konfigurator/wracam",
+      "destination": "/konfigurator.html?k=wracam",
+      "permanent": true
+    },
+    {
+      "source": "/konfigurator/diagnostyka",
+      "destination": "/konfigurator.html?k=diagnostyka",
+      "permanent": true
+    },
+    {
+      "source": "/konfigurator/nowi",
+      "destination": "/konfigurator.html?k=nowi",
+      "permanent": true
+    },
+    {
+      "source": "/feedback",
+      "destination": "/rejestracja",
+      "permanent": true
+    },
+    {
+      "source": "/en",
+      "destination": "/en/index.html",
+      "permanent": false
+    },
+    {"source": "/polkolonie.html", "destination": "/dni-probne", "permanent": true},
+    {"source": "/polkolonie-dzieci.html", "destination": "/dni-probne", "permanent": true},
+    {"source": "/polkolonie-dorosli.html", "destination": "/dni-probne", "permanent": true},
+    {"source": "/en/polkolonie.html", "destination": "/en/trial-days", "permanent": true},
+    {"source": "/en/polkolonie-dzieci.html", "destination": "/en/trial-days", "permanent": true},
+    {"source": "/en/polkolonie-dorosli.html", "destination": "/en/trial-days", "permanent": true}
+  ],
+  "rewrites": [
+    {
+      "source": "/rejestracja",
+      "destination": "/strefa-tnm.html"
+    },
+    {
+      "source": "/dolacz",
+      "destination": "/rejestracja-otwarta.html"
+    },
+    {
+      "source": "/premium",
+      "destination": "/rejestracja-premium.html"
+    },
+    {
+      "source": "/polkolonie-feedback",
+      "destination": "/polkolonie-feedback.html"
+    },
+    {
+      "source": "/rejestracja-diagnostyka",
+      "destination": "/rejestracja-diagnostyka.html"
+    },
+    {
+      "source": "/dni-probne",
+      "destination": "/dni-probne.html"
+    },
+    {
+      "source": "/en/trial-days",
+      "destination": "/en/dni-probne.html"
+    },
+    {
+      "source": "/wracam",
+      "destination": "/wracam.html"
+    },
+    {
+      "source": "/konfigurator",
+      "destination": "/konfigurator.html"
+    },
+    {
+      "source": "/thank-you",
+      "destination": "/thank-you.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(css|js)/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=300, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(img|video|graphics)/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)\\.html",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache"
+        }
+      ]
+    },
+    {
+      "source": "/wypis.html",
+      "headers": [
+        {
+          "key": "Referrer-Policy",
+          "value": "no-referrer"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        }
+      ]
+    },
+    {
+      "source": "/usun-dane.html",
+      "headers": [
+        {
+          "key": "Referrer-Policy",
+          "value": "no-referrer"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        }
+      ]
+    },
+    {
+      "source": "/en/wypis.html",
+      "headers": [
+        {
+          "key": "Referrer-Policy",
+          "value": "no-referrer"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        }
+      ]
+    },
+    {
+      "source": "/en/usun-dane.html",
+      "headers": [
+        {
+          "key": "Referrer-Policy",
+          "value": "no-referrer"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        }
+      ]
+    },
+    {
+      "source": "/404.html",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/en/404.html",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/konfigurator.html",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/rejestracja-premium.html",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/rejestracja-diagnostyka.html",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/en/rejestracja-diagnostyka.html",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/rejestracja-diagnostyka",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/thank-you.html",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/wypis.html",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/usun-dane.html",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/artletter-potwierdzony.html",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/strefa-tnm.html",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/wracam.html",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/polkolonie-feedback.html",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/rejestracja-otwarta.html",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/en/konfigurator.html",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/en/thank-you.html",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/en/wypis.html",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/en/usun-dane.html",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/en/artletter-potwierdzony.html",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/en/strefa-tnm.html",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/en/wracam.html",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/en/polkolonie-feedback.html",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/en/rejestracja-otwarta.html",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/rejestracja",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/dolacz",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/premium",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/wracam",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/polkolonie-feedback",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/konfigurator",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/thank-you",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "the-noise-makers-2026.vercel.app"
+        }
+      ],
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    }
+  ]
+}

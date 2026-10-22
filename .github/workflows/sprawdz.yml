@@ -1,0 +1,28 @@
+name: Sprawdzenie zmiany
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sprawdz:
+    name: Sprawdzenie plików strony
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Sprawdzenie plików strony
+        run: python3 .github/narzedzia/sprawdz.py
+
+      - name: Lista zmienionych plików
+        if: always()
+        run: python3 .github/narzedzia/zmiany.py "${{ github.event.pull_request.base.sha || github.event.before }}" "${{ github.event.pull_request.head.sha || github.sha }}"

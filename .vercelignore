@@ -1,0 +1,15 @@
+middleware.test.mjs
+_ui-verify-out
+.env*
+*.env
+.secrets
+.staticrypt.json
+.consent-hosts
+.gitignore
+.vercel
+credentials.json
+service-account.json
+id_rsa
+*.pem
+.github
+.DS_Store

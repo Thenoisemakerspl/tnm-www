@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Thank you | The Noise Makers</title>
+<link rel="icon" type="image/png" href="../assets/img/logo/sygnet-red-square.png">
+<link rel="preconnect" href="https://use.typekit.net" crossorigin>
+<link rel="stylesheet" href="https://use.typekit.net/fjh4kwb.css">
+<link rel="stylesheet" href="../assets/demo.css">
+
+
+
+
+
+
+
+<style>
+.ty-wrap{min-height:52vh;display:flex;align-items:center;justify-content:center;padding:48px 0}
+.ty-card{max-width:640px;width:100%;background:#fff;border:1.5px solid rgba(46,46,46,.16);border-top:5px solid #e10800;padding:44px 40px;text-align:left}
+.ty-card h1{margin:0 0 14px;font-size:clamp(26px,4vw,36px);line-height:1.15}
+.ty-card p{margin:0 0 12px;font-size:16.5px;line-height:1.55;color:#2e2e2e}
+.ty-card .muted{color:#8a8276;font-size:14px}
+.ty-card .btn{margin-top:18px}
+.ty-feel{display:block;margin-top:26px;font-weight:700;color:#2e2e2e}
+.ty-feel .art{color:#e10800}
+@media(max-width:520px){.ty-card{padding:30px 22px}}
+
+
+
+
+
+
+
+.tyx{display:flex;align-items:stretch;min-height:420px;max-width:1043px;width:100%;background:#fff;
+  border:1.5px solid rgba(46,46,46,.16);border-top:5px solid #e10800;overflow:hidden}
+.tyx__media{position:relative;flex:0 0 46%;min-height:320px;background:#161616;overflow:hidden}
+.tyx__bg{position:absolute;inset:0;background-position:center 30%;background-size:cover;background-repeat:no-repeat;
+  filter:grayscale(1) contrast(1.02)}
+.tyx__media::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.12)}
+.tyx__logo{position:absolute;top:22px;left:22px;z-index:1;width:64px;height:64px;display:block}
+.tyx__logo img{width:100%;height:100%;object-fit:contain;display:block}
+.tyx__body{flex:1;min-width:0;display:flex;flex-direction:column;justify-content:center;gap:16px;
+  padding:clamp(28px,4vw,48px) clamp(22px,3.5vw,44px)}
+.tyx__title{margin:0;font-size:clamp(26px,2.6vw,38px);line-height:1.1;letter-spacing:-.015em}
+.tyx__text{display:flex;flex-direction:column;gap:12px}
+.tyx__text p{margin:0;font-size:16.5px;line-height:1.55;color:#2e2e2e}
+@media(max-width:860px){
+  .tyx{flex-direction:column;max-width:560px}
+  .tyx__media{flex:none;order:2;min-height:240px}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="demo-nav">
+    <span class="demo-nav__logo"><img src="../assets/img/figma/logo-tnm-white.png" alt="The Noise Makers"></span>
+    <span class="demo-nav__right">
+
+<a class="demo-nav__back" href="/"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M19 12H5M11 6l-6 6 6 6"/></svg><span>Home</span></a></span>
+  </header>
+
+  <main class="wrap">
+    <div class="container ty-wrap">
+      
+
+
+
+
+
+
+      <div class="ty-card" id="ty-card">
+        <h1>Thank you.</h1>
+        <p>We will stay in touch - everything you need is sent to your email address.</p>
+        <p>If you cannot see the message, check your SPAM folder or write to <a href="mailto:jestem@thenoisemakers.pl">jestem@thenoisemakers.pl</a>.</p>
+        <span class="ty-feel">feel the he<span class="art">ART</span></span>
+      </div>
+    </div>
+  </main>
+
+  <footer class="demo-foot"><span class="feel">feel the he<span class="art">ART</span></span></footer>
+</div>
+
+ 
+<script src="../assets/js/flags.js?v=20260902"></script>
+<script src="../assets/js/consent.en.js?v=20260911"></script>
+<script src="../assets/js/track.js?v=20260911"></script>
+<script src="../assets/js/pixel.js?v=20260902e5"></script>
+<script src="../assets/js/gtm.js?v=20260911"></script>
+<script>
+(function(){
+  "use strict";
+  var qp = new URLSearchParams(location.search);
+  
+
+
+
+
+
+
+
+  var checkout = qp.get("checkout");
+  var sid = qp.get("session_id") || "";
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+  var W_OK = { feedback: 1, polkolonie: 1, wracam: 1, "dni-probne": 1, diagnostyka: 1, nowi: 1 };
+  var w = W_OK[qp.get("w")] ? qp.get("w") : null;
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  var EN    = /^\/en\//.test(location.pathname);
+  var KONF  = EN ? "/en/konfigurator.html" : "/konfigurator";
+  var HOME  = EN ? "/en/index.html" : "/";
+  var DP = (w === "dni-probne");
+  var DP_URL = EN ? "/en/trial-days" : "/dni-probne";
+  var backUrl = DP ? DP_URL : (w ? (KONF + "?k=" + w) : KONF);
+  var backLabel = DP ? "Back to Trial Days " : "Back to the configurator ";
+  
+
+
+  var KOSZYK_KEY = "tnm_koszyk_v1";
+  function koszykWyczysc() { try { localStorage.removeItem(KOSZYK_KEY); } catch (e) {} }
+  if (checkout === "success" || qp.get("reserved") === "1") koszykWyczysc();
+  var restoreUrl = DP ? DP_URL : backUrl + (backUrl.indexOf("?") >= 0 ? "&" : "?") + "restore=1";
+  
+
+
+
+  (function () {
+    var home = document.querySelector(".demo-nav__back");
+    if (home) home.setAttribute("href", HOME);
+  })();
+  var ARR = '<span aria-hidden="true">&rsaquo;</span>';
+  var html = null;
+  var reserved = qp.get("reserved") === "1";
+  
+
+  if (window.TNMTrack) { try { TNMTrack("checkout_return", { status: (checkout === "cancel") ? "cancel" : (reserved ? "reserved" : (checkout === "success" ? "success" : "neutral")), has_session_id: !!sid, variant: w || null }); } catch (e) {} }
+  if (checkout !== "cancel" && reserved) {
+    html = '<h1>Reservations received. Thank you!</h1>'
+      + '<p>We have saved your preferences - with no payment today. We will reach out when sign-ups open for the chosen classes.</p>'
+      + (w ? '<a class="btn" href="' + backUrl + '">' + backLabel + ARR + '</a>' : '')
+      + '<span class="ty-feel">Feel the he<span class="art">art</span>.</span>';
+  } else if (checkout === "success") {
+    
+
+
+
+
+
+    var diag = false;
+    try { diag = !!(JSON.parse(sessionStorage.getItem("tnm_last_order") || "{}") || {}).diagnostyka; } catch (e) {}
+     
+    var TYX_COPY_WSPOLNE = {
+      title: 'Thank you for your order<br>and we are glad you are here.',
+      paras: [
+        'Your order has reached us.<br>Thank you for the classes you have chosen.',
+        'In the next step we will come back to you with proposals and dates that fit what you need.',
+        'If you are booking group or ensemble classes, we will come back to you first as soon as available dates and schedules appear.<br>We will find an option that fits you.',
+        'We are glad that soon we will begin a shared adventure full of passion, joy and satisfaction.<br>And, above all, of relationships that enrich.',
+        'See you soon,<br>The Noise Makers Team'
+      ]
+    };
+     
+    var TYX_COPY_DP = {
+      title: 'Thank you for reserving your spot<br>and we are glad we will meet you.',
+      paras: [
+        'Your place at the trial class is now reserved.',
+        'We are sending a confirmation to your email address, with the location and the practical details.',
+        'See you soon,<br>The Noise Makers Team'
+      ]
+    };
+    var TYX_COPY = { feedback: TYX_COPY_WSPOLNE, polkolonie: TYX_COPY_WSPOLNE, wracam: TYX_COPY_WSPOLNE, "dni-probne": TYX_COPY_DP };
+    var c = TYX_COPY[w] || TYX_COPY_WSPOLNE;
+    var extra = '';
+    if (diag) extra += '<p><b>Assessment:</b> you will book your date with a calendar link that we will send you by email. There is nothing you need to do, we will get in touch first.</p>';
+    if (sid) extra += '<p class="muted" style="margin-top:10px">Operation no.: ' + sid.replace(/[^\w-]/g, "").slice(0, 28) + '&hellip;</p>';
+    var tyx = '<div class="tyx">'
+      + '<div class="tyx__media"><span class="tyx__bg" style="background-image:url(\'../assets/img/figma/tnm-members.webp\')" aria-hidden="true"></span>'
+      + '<span class="tyx__logo"><img src="../assets/img/logo/sygnet-red-square-white.png" alt="The Noise Makers"></span></div>'
+      + '<div class="tyx__body"><h1 class="tyx__title">' + c.title + '</h1>'
+      + '<div class="tyx__text">' + c.paras.map(function (t) { return '<p>' + t + '</p>'; }).join('') + extra + '</div>'
+      + '</div></div>';
+    document.getElementById("ty-card").outerHTML = tyx;
+    html = false;  
+  } else if (checkout === "cancel") {
+    html = '<h1>The payment was not completed.</h1>'
+      + '<p>Nothing lost - your cart is waiting. You can come back and finish your order any time.</p>'
+      + '<a class="btn" href="' + restoreUrl + '">' + (DP ? 'Back to Trial Days ' : 'Back to the configurator ') + ARR + '</a>'
+      + '<p class="muted" style="margin-top:16px">Something not working? Write to jestem@thenoisemakers.pl - we will help.</p>';
+  }
+  
+
+  if (html === false) {   } else if (html === null) {
+    var card = document.getElementById("ty-card");
+    var back = document.createElement("p");
+    back.innerHTML = '<a class="btn" href="' + backUrl + '">' + backLabel + ARR + '</a>';
+    var feel = card.querySelector(".ty-feel");
+    if (feel) card.insertBefore(back, feel); else card.appendChild(back);
+  } else {
+    document.getElementById("ty-card").innerHTML = html;
+  }
+})();
+</script>
+</body>
+</html>

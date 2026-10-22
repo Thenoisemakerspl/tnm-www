@@ -1,0 +1,39 @@
+name: Cofnij ostatnią zmianę strony
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publikacja-strony
+  cancel-in-progress: false
+
+jobs:
+  cofnij:
+    name: Cofnięcie zmiany
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          ref: main
+
+      - name: Przygotowanie cofnięcia
+        run: |
+          git config user.name "Automat cofania"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          python3 .github/narzedzia/cofnij.py
+
+      - name: Sprawdzenie plików po cofnięciu
+        run: python3 .github/narzedzia/sprawdz.py
+
+      - name: Zapis cofnięcia w repozytorium
+        run: |
+          if ! git push origin HEAD:main; then
+            echo "::error::W międzyczasie ktoś zapisał nową zmianę. Nic nie zostało cofnięte. Uruchom przycisk jeszcze raz."
+            exit 1
+          fi
+          echo "Cofnięcie zapisane. Vercel opublikuje poprzednią wersję strony, zwykle w 1-3 minuty." >> "$GITHUB_STEP_SUMMARY"

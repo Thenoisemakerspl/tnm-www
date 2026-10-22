@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>ARTletter - sign-up confirmation | The Noise Makers</title>
+<meta name="description" content="Confirmation of your ARTletter sign-up - the newsletter of The Noise Makers.">
+<link rel="icon" type="image/svg+xml" href="../assets/img/logo/favicon-tnm-32.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/logo/favicon-tnm-32.png">
+<link rel="apple-touch-icon" href="../assets/img/logo/favicon-tnm-180.png">
+ 
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Noise Makers">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="ARTletter - sign-up confirmation | The Noise Makers">
+<meta property="og:description" content="Confirmation of your ARTletter sign-up - the newsletter of The Noise Makers.">
+<meta property="og:url" content="https://www.thenoisemakers.pl/en/artletter-potwierdzony.html">
+<meta property="og:image" content="https://www.thenoisemakers.pl/assets/img/og/og-tnm.jpg">
+<meta property="og:image:secure_url" content="https://www.thenoisemakers.pl/assets/img/og/og-tnm.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Noise Makers - Academy of Music: a child playing the glockenspiel and two dancers in a studio, red TNM logo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ARTletter - sign-up confirmation | The Noise Makers">
+<meta name="twitter:description" content="Confirmation of your ARTletter sign-up - the newsletter of The Noise Makers.">
+<meta name="twitter:image" content="https://www.thenoisemakers.pl/assets/img/og/og-tnm.jpg">
+<meta name="twitter:image:alt" content="The Noise Makers - Academy of Music: dziecko grające na dzwonkach i dwoje tancerzy w studiu, czerwone logo TNM">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#F0E9D7;color:#2E2E2E;font-family:'Helvetica Neue',Arial,sans-serif;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+  .card{background:#fff;max-width:560px;width:100%;padding:48px 40px;border:1px solid #d7cfc1}
+  .brand{font-size:13px;letter-spacing:2.4px;text-transform:uppercase;font-weight:700;color:#E20900;margin-bottom:28px}
+  h1{font-size:32px;line-height:1.1;font-weight:700;letter-spacing:-0.5px;margin-bottom:16px}
+  p{font-size:17px;line-height:1.6;margin-bottom:12px}
+  .muted{color:#6b6459;font-size:15px}
+  .stan{display:none}
+  .stan.aktywny{display:block}
+  a{color:#E20900;font-weight:700;text-decoration:none}
+  a:hover{text-decoration:underline}
+  .btn{display:inline-block;background:#E20900;color:#fff;padding:14px 30px;font-weight:700;font-size:16px;margin-top:14px;
+       border:0;font-family:inherit;line-height:1.2;cursor:pointer}
+  .btn:hover{text-decoration:none;background:#c40800}
+  .btn[disabled]{background:#9a8f80;cursor:default}
+</style>
+</head>
+<body>
+<main class="card">
+  <div class="brand">The Noise Makers | ARTLETTER</div>
+
+  
+
+
+
+  
+
+
+
+
+  <section id="stan-potwierdz" class="stan aktywny">
+    <h1>One more click.</h1>
+    <p>Confirm you want to receive the ARTletter from The Noise Makers.</p>
+    <button class="btn" type="button" id="btn-potwierdz">Confirm my sign-up</button>
+  </section>
+
+  <section id="stan-laduje" class="stan">
+    <h1>We are confirming your sign-up.</h1>
+    <p class="muted">One moment - we are connecting to our system.</p>
+  </section>
+
+  <noscript>
+    <h1>We need JavaScript enabled</h1>
+    <p>ARTletter sign-up confirmation happens in this browser, and it has JavaScript turned off. Enable it and refresh the page, and we will finish the sign-up.</p>
+    <p class="muted">If that does not help, write to us: <a href="mailto:jestem@thenoisemakers.pl">jestem@thenoisemakers.pl</a> - we will confirm the sign-up manually.</p>
+  </noscript>
+
+  <section id="stan-ok" class="stan">
+    <h1>Sign-up confirmed!</h1>
+    <p>We are glad you are with us. From now on the ARTletter from The Noise Makers will land straight in your inbox.</p>
+    <p class="muted">You can unsubscribe from any message with one click - you will find the link in the footer.</p>
+    <a class="btn" href="/">Back to the website</a>
+  </section>
+
+  <section id="stan-blad" class="stan">
+    <h1>This link did not work</h1>
+    <p>The confirmation link has already been used or has expired.</p>
+    <p>If you would like to sign up for the ARTletter, fill in the form on the website again - we will send a new link. If something is wrong, write to us: <a href="mailto:jestem@thenoisemakers.pl">jestem@thenoisemakers.pl</a>.</p>
+    <a class="btn" href="/">Back to the website</a>
+  </section>
+</main>
+ 
+<script src="../assets/js/flags.js?v=20260902"></script>
+<script src="../assets/js/consent.en.js?v=20260929b"></script>
+<script src="../assets/js/track.js?v=20260911"></script>
+<script src="../assets/js/pixel.js?v=20260902e5"></script>
+<script src="../assets/js/gtm.js?v=20260911"></script>
+<script>
+(function(){
+  var pokaz=function(id){
+    document.querySelectorAll('.stan').forEach(function(s){s.classList.remove('aktywny');});
+    document.getElementById(id).classList.add('aktywny');
+  };
+  var t=new URLSearchParams(location.search).get('t');
+  if(!t){pokaz('stan-blad');return;}
+  var btn=document.getElementById('btn-potwierdz');
+  var wyslany=false;    
+  btn.addEventListener('click',function(){
+    if(wyslany){return;}
+    wyslany=true; btn.disabled=true;
+    pokaz('stan-laduje');
+    fetch('https://hook.eu1.make.com/ge18ch2dr22lk99jp79ufghviq7bg6b6',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({t:t})
+    }).then(function(r){return r.json();}).then(function(d){
+      pokaz(d&&d.ok?'stan-ok':'stan-blad');
+    }).catch(function(){pokaz('stan-blad');});
+  });
+})();
+</script>
+</body>
+</html>
